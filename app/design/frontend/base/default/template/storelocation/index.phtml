@@ -1,0 +1,34 @@
+<div>
+	<div class="find_stores">
+		<h2><?php echo $this->__('STORE LOCATION');?></h2>
+
+		<form>
+			<fieldset>
+				<label><?php echo $this->__('COUNTRY');?></label>
+				<select id="countries_select" data-url="<?php echo Mage::getBaseUrl();?>storelocation/stores/regions">
+					<?php
+					foreach (Mage::registry('countries') as $country) {
+						echo '<option value="'.$country->getIsocode2().'">'.$country->name.'</option>';
+					}
+					?>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<label><?php echo $this->__('REGION');?></label>
+				<select id="regions_select" data-url="<?php echo Mage::getBaseUrl();?>storelocation/stores/stores">
+					<?php
+					foreach (Mage::registry('regions') as $region) {
+						echo '<option value="'.$region->getRegion().'">'.$region->getRegion().'</option>';
+					}
+					?>
+				</select>
+			</fieldset>
+		</form>
+
+		<div id="stores_content" data-iconmap="<?php echo Mage::getBaseUrl();?>skin/frontend/base/default/images/marker_store.png">
+		</div>
+	</div>
+
+	<div class="store_map" id="store_map"></div>
+</div>

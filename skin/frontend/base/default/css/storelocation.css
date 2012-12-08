@@ -1,0 +1,56 @@
+.find_stores{
+	font-family: Arial,Helvetica,sans-serif;
+	background-color:#ffffff;
+	width:200px;
+	height: 530px;
+	overflow: auto;
+	padding:20px;
+	z-index: 999999;
+	float: left;
+}
+
+.find_stores form{
+	margin-bottom:60px;
+}
+	
+.store_map{
+	width: 660px;
+	height: 600px;
+	float: left;
+	background: #ccc;
+}
+
+.find_stores h2{
+	font-size:14px;
+	margin-bottom:30px;
+	font-weight:normal;
+}
+		
+.find_stores fieldset{
+	margin:0 0 10px 0;
+}
+
+.find_stores label{
+	display: block;
+	font-size:11px;
+}
+
+.find_stores .dir_store{
+	margin-bottom:30px;
+}
+
+.dir_store p{
+	font-size:11px;
+	color:#555555;
+}
+
+.dir_store p a{
+	text-decoration:underline;
+	text-transform:uppercase;
+	color:#555555;
+	padding-top:10px;
+}
+
+.dir_store p a:hover{
+	color:#333333;
+}

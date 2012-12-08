@@ -1,0 +1,7 @@
+<?php
+
+foreach (Mage::registry('regions') as $region) {
+	echo '<option>'.$region->getRegion().'</option>';
+}
+
+?>

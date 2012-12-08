@@ -1,0 +1,23 @@
+<?php
+
+$i=0;
+$json = '[';
+
+foreach (Mage::registry('stores') as $store) {
+	$json .= '{
+				text:"<div class=\"dir_store\"><p>'.nl2br($store->getAddress()).'<p><a href=\"#\" class=\"link_view_store\" data-storepos=\"'.$i.'\">'.$this->__('view map').'</a></p></div>", 
+				address:"<div class=\"dir_store\"><p>'.nl2br($store->getAddress()).'<p></p></div>", 
+				lat:"'.$store->getLat().'", 
+				lng:"'.$store->getLng().'"
+			},';
+	$i++;
+}
+
+$json = substr($json, 0, strlen($json)-1);
+
+$json .= ']';
+
+$json = str_replace(array("\r", "\n"), '', $json);
+
+echo $json;
+?>
